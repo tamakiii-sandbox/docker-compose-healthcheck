@@ -14,3 +14,6 @@ SHELL = bash
 	bin/healthcheck.sh node
 	make -C test
 
+@validate:
+	docker-compose run --rm circleci config validate
+
