@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamakiii-sandbox/docker-compose-healthcheck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamakiii-sandbox/docker-compose-healthcheck/issues"
+  },
+  "homepage": "https://github.com/tamakiii-sandbox/docker-compose-healthcheck#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
