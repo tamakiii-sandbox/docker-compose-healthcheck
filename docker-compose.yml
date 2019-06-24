@@ -3,5 +3,8 @@ services:
   node:
     image: node:8.16.0-alpine
     working_dir: /app
+    entrypoint: npx http-server -p 8080 public
+    ports:
+      - 8080:8080
     volumes:
       - .:/app
