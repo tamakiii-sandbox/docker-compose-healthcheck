@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.2"
 services:
   node:
     build: docker/node
@@ -9,8 +9,13 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-      start_period: 3s
     ports:
       - 8080:8080
+    volumes:
+      - .:/app
+
+  circleci:
+    image: circleci/circleci-cli:0.1.5691-alpine
+    working_dir: /app
     volumes:
       - .:/app

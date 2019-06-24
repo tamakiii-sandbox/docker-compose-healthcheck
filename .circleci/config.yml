@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Build docker image
+          command: docker-compose build
+      - run:
+          name: Run test
+          command: make @test
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
