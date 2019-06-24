@@ -9,7 +9,6 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-      start_period: 3s
     ports:
       - 8080:8080
     volumes:
