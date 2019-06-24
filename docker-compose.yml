@@ -1,9 +1,15 @@
 version: "3.7"
 services:
   node:
-    image: node:8.16.0-alpine
+    build: docker/node
     working_dir: /app
     entrypoint: npx http-server -p 8080 public
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/status || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 3s
     ports:
       - 8080:8080
     volumes:
