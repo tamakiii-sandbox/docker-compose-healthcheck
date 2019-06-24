@@ -17,7 +17,6 @@ while [ $COUNT -lt $RETRIES ]; do
     break;
   fi
 
-  let COUNT=COUNT+1
-  sleep $INTERVAL
+  let COUNT=COUNT+1 && sleep $INTERVAL
 done
 
